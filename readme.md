@@ -27,3 +27,4 @@ Your THREE.js scene should now be viewable at http://localhost:3001.
 
 ## License
 
+MIT, see [LICENSE.md](https://github.com/christopher4lis/three-boilerplate/blob/master/LICENSE.md) for details.
