@@ -24,3 +24,6 @@ BrowserSync is included for two reasons:
 
 
 Your THREE.js scene should now be viewable at http://localhost:3001.
+
+## License
+
