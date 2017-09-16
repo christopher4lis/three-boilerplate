@@ -1,6 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
@@ -14,8 +14,8 @@ module.exports = {
         loaders: [{
             test: /\.scss$/,
             use: ExtractTextPlugin.extract({
-                fallback: "style-loader",
-                use: "css-loader!postcss-loader!sass-loader"
+                fallback: 'style-loader',
+                use: 'css-loader!postcss-loader!sass-loader'
             })
         }, {
             test: /\.js$/,
@@ -31,7 +31,7 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(), // Enable HMR
         new webpack.NamedModulesPlugin(),
-        new ExtractTextPlugin("../css/style.css"),
+        new ExtractTextPlugin('../css/style.css'),
         new BrowserSyncPlugin({
             host: 'localhost',
             port: 3001,
@@ -41,7 +41,7 @@ module.exports = {
                     '**/*.html'
                 ],
                 fn: function(event, file) {
-                    if (event === "change") {
+                    if (event === 'change') {
                         const bs = require('browser-sync').get('bs-webpack-plugin');
                         bs.reload();
                     }
