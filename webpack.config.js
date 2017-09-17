@@ -12,12 +12,6 @@ module.exports = {
     },
     module: {
         loaders: [{
-            test: /\.scss$/,
-            use: ExtractTextPlugin.extract({
-                fallback: 'style-loader',
-                use: 'css-loader!postcss-loader!sass-loader'
-            })
-        }, {
             test: /\.js$/,
             exclude: /(node_modules|bower_components)/,
             use: {
@@ -40,7 +34,7 @@ module.exports = {
                 match: [
                     '**/*.html'
                 ],
-                fn: function(event, file) {
+                fn: (event) => {
                     if (event === 'change') {
                         const bs = require('browser-sync').get('bs-webpack-plugin');
                         bs.reload();
